@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    background: #1C2833;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 500px;
+    height: 100vh;
+    background: #769ec4;
+    overflow: hidden;
+    box-shadow: 0px 0.1rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+
+.music-container {
+    position: relative;
+    right: 46%;
+    width: 70rem;
+    height: 37rem;
+    padding: 5rem;
+    padding-right: 15rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.music-container #title {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: #171717;
+    margin: 2rem 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+
+}
+
+
+.music-container #artist {
+    color: #cacaca;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.img-container {
+    margin-top: 2rem;
+}
+
+.img-container img {
+    max-width: 230px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.music-controls {
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+#song-dur {
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#song-dur div {
+    padding: 0px 1.4rem;
+}
+
+#song-dur input {
+    width: 15rem;
+}
+
+.volume {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.volume i {
+    font-size: 1.4rem;
+}
+
+#seekRange,
+#volume {
+    width: 120px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #83a9ff;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#seekRange::-webkit-slider-thumb,
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #3774FF;
+    cursor: grab;
+    border-radius: 100%;
+}
+
+#seekRange:hover,
+#volume:hover {
+    opacity: 1.0;
+}
+
+#seekRange {
+    margin-top: 10px;
+}
+
+#volume {
+    width: 60%;
+}
+
+.current-time,
+.total-duration {
+    font-size: 20px;
+}
+
+.music-controls {
+    margin-top: 0.8rem;
+}
+
+.music-controls .fa-solid {
+    color: #111111;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 2rem;
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+}
+
+.music-controls .fa-solid:hover {
+    color:  #FF7043;
+}
+.music-container #play:hover{
+    background-color: #FF7043;
+}
+
+.music-controls #play {
+    width: 1.8rem;
+    height: 1.8rem;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.music-controls #play:hover {
+    box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+
+.animation {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

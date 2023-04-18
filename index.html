@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/img/fav.webp" />
+    <script src="https://kit.fontawesome.com/3995ebe693.js" crossorigin="anonymous"></script>
+    <title>Music | Web App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="music-container">
+            <h2 id="title"> <!--The Title of song goes here--> </h2>
+            <h3 id="artist"><!--The Artist of song goes here--></h3>
+
+            <div class="img-container">
+                <img src="" alt=""> <!--The image of song goes here-->
+            </div>
+            <audio src=""></audio>
+
+            <div id="song-dur">
+                <div class="current-time">00:00</div>
+                <input type="range" min="0" max="100" step="1" value="0" id="seekRange" onchange="setDuration()">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <div class="volume">
+                <i class="fa-solid fa-volume-low"></i>
+                <div id="vol-section">
+                    <input type="range" min="0" max="1" value='1' step="0.01" title="Volume" id="volume"
+                        onchange="setVolume()">
+                </div>
+                <i class="fa-solid fa-volume-high"></i>
+
+            </div>
+
+            <!-- controls -->
+            <div class="music-controls">
+                <i class="fa-solid fa-shuffle" id="shuffle" title="shuffle"></i>
+                <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
+                <i class="fa-solid fa-play" id="play" title="Play"></i>
+                <i class="fa-solid fa-forward" id="next" title="Next"></i>
+                <i class="fa-solid fa-repeat" id="repeat" title="repeat"></i>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</body>
+
+</html>
