@@ -59,6 +59,7 @@ let playMsuic = () => {
     isPlayin = true;
     music.play();
     play.classList.replace('fa-play', 'fa-pause');
+    play.title = 'Pause'
     image.classList.add('animation');
 }
 
@@ -66,6 +67,7 @@ let pauseMusic = () => {
     isPlayin = false;
     music.pause();
     play.classList.replace('fa-pause', 'fa-play');
+    play.title = 'Play'
     image.classList.remove('animation');
 }
 
@@ -186,4 +188,12 @@ let random_bg_color = () => {
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
     document.body.style.background = gradient;
 }
+
+document.addEventListener('keydown', function(event) {
+  if (event.code === 'Space' || event.keyCode === 32) {
+    // Spacebar is clicked
+    // console.log('Spacebar clicked!');
+    isPlayin ? pauseMusic() : playMsuic();
+  }
+});
 startSong(0);
